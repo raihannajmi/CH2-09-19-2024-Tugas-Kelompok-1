@@ -8,21 +8,23 @@
   <body>
     <h1>Hello World!</h1>
 
-    <h1 id="demo">This is some text.</h1>
+    <section>
+      <h1 id="demo">This is some text.</h1>
 
-    <input type="text" id="inputText" placeholder="Masukkan teks baru" />
+      <input type="text" id="inputText" placeholder="Masukkan teks baru" />
 
-    <button onclick="changeText()">Change Text</button>
+      <button onclick="changeText()">Change Text</button>
 
-    <script>
-      function changeText() {
-        // Ambil elemen input dan teks demo
-        let inputElement = document.getElementById("inputText");
-        let demoElement = document.getElementById("demo");
+      <script>
+        function changeText() {
+          // Ambil elemen input dan teks demo
+          let inputElement = document.getElementById("inputText");
+          let demoElement = document.getElementById("demo");
 
-        // Ubah teks elemen 'demo' berdasarkan input
-        demoElement.textContent = inputElement.value;
-      }
-    </script>
+          // Ubah teks elemen 'demo' berdasarkan input
+          demoElement.textContent = inputElement.value;
+        }
+      </script>
+    </section>
   </body>
 </html>
