@@ -1,53 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <!-- Section untuk mengubah teks -->
-    <section>
-      <h2>Ubah Teks</h2>
-      <h1 id="demo">This is some text.</h1>
+<body>
+  <h1>Hello World!</h1>
 
-      <input type="text" id="inputText" placeholder="Masukkan teks baru" />
+  <!-- Section untuk mengubah teks -->
+  <section>
+    <h2>Ubah Teks</h2>
+    <h1 id="demo">This is some text.</h1>
 
-      <button onclick="changeText()">Change Text</button>
+    <input type="text" id="inputText" placeholder="Masukkan teks baru" />
 
-      <script>
-        function changeText() {
-          // Ambil elemen input dan teks demo
-          let inputElement = document.getElementById("inputText");
-          let demoElement = document.getElementById("demo");
+    <button onclick="changeText()">Change Text</button>
 
-          // Ubah teks elemen 'demo' berdasarkan input
-          demoElement.textContent = inputElement.value;
-        }
-      </script>
-    </section>
+    <script>
+      function changeText() {
+        // Ambil elemen input dan teks demo
+        let inputElement = document.getElementById("inputText");
+        let demoElement = document.getElementById("demo");
 
-    <!-- Section untuk memasukkan NIM -->
-    <section>
-      <h2>Masukkan Nomor Induk Mahasiswa (NIM)</h2>
-      <h1 id="nimDemo">Nomor Induk Mahasiswa: -</h1>
+        // Ubah teks elemen 'demo' berdasarkan input
+        demoElement.textContent = inputElement.value;
+      }
+    </script>
+  </section>
 
-      <input type="text" id="nimInput" placeholder="Masukkan NIM" />
+  <!-- Section untuk memasukkan NIM -->
+  <section>
+    <h2>Masukkan Nomor Induk Mahasiswa (NIM)</h2>
+    <h1 id="nimDemo">Nomor Induk Mahasiswa: -</h1>
 
-      <button onclick="changeNIM()">Change NIM</button>
+    <input type="text" id="nimInput" placeholder="Masukkan NIM" />
 
-      <script>
-        function changeNIM() {
-          //Input untuk NIM
-          let nimElement = document.getElementById("nimInput");
-          let nimDemoElement = document.getElementById("nimDemo");
+    <button onclick="changeNIM()">Change NIM</button>
 
-          //Teks elemen 'nimDemo' berdasarkan input NIM
-          nimDemoElement.textContent = `Nomor Induk Mahasiswa: ${nimElement.value}`;
-        }
-      </script>
-    </section>
-  </body>
-</html>
+    <script>
+      function changeNIM() {
+        //Input untuk NIM
+        let nimElement = document.getElementById("nimInput");
+        let nimDemoElement = document.getElementById("nimDemo");
+
+        //Teks elemen 'nimDemo' berdasarkan input NIM
+        nimDemoElement.textContent = `Nomor Induk Mahasiswa: ${nimElement.value}`;
+      }
+    </script>
+  </section>
+  
+  <!-- section input data mahasiswa made by aqsa -->
+  <div id="sect-1" class="py-5 bg-custom d-flex flex-column gap-4 gap-md-0 flex-md-row justify-content-around align-items-center align-items-md-stretch">
+    <form action="" id="aqsa" class="card p-4 col-11 col-md-5 d-flex flex-column gap-2">
+      <h3>Form Data Mahasiswa</h3>
+      Nama : <input type="text" id="IName">
+      Jenis Kelamin : <input type="text" id="IGender">
+      <div onclick="changeText()" class="button">Input Data</div>
+    </form>
+
+    <div class="card col-11 col-md-5 p-4">
+      <h3>Data Mahasiswa</h3>
+      Nama : <div id="name" class="fw-bold"></div>
+      Jenis Kelamin : <div id="gender" class="fw-bold"></div>
+    </div>
+  </div>
+
+  <script>
+    function changeText() {
+      document.getElementById("name").innerHTML = document.getElementById("IName").value;
+      document.getElementById("gender").innerHTML = document.getElementById("IGender").value;
+    }
+  </script>
+</body>
