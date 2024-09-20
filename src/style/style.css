@@ -1,5 +1,5 @@
-.bg-custom{
-  background: #F1F3FF;
+.bg-custom {
+  background: #f1f3ff;
 }
 .button {
   background-color: rgb(25, 177, 25);
@@ -9,4 +9,9 @@
   width: fit-content;
   margin: 20px auto 0;
   cursor: pointer;
+}
+
+section {
+  padding: 30px 0px;
+  border-bottom: 1px red solid;
 }
