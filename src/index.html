@@ -34,27 +34,26 @@
 
     <!--Student NIM Data Input Section By Ferdi-->
     <div id="sect-2" 
-      class="py-5 bg-light d-flex flex-column justify-content-center align-items-center"
-    >
-    <!--Student NIM Data Input Form-->
-    <div class="card shadow-lg p-5 col-10 col-md-4 d-flex flex-column align-items-start">
-      <h4 class="mb-4 text-center w-100"> Masukkan Data Mahasiswa </h4>
-      <div class="form-group w-100">
-      <label for="InputNIM" class="form-label">NIM:</label>
-      <input type="text" id="InputNIM" class="form-control mb-2">
-    </div>
-    <div class="d-grid gap-2 w-100">
-      <button type="button" onclick="submitNIM()" class="btn btn-success">Simpan Data</button>
-    </div>
-    </div>
-    <!--Student NIM Data Output-->
-    <div class="card mt-4 p-4 col-10 col-md-4 d-flex flex-column align-items-start">
-      <h4 class="text-center w-100">Data Mahasiswa</h4>
-      <div class="w-100 mt-3">
-      <span class="fw-bold">NIM:</span>
-      <div id="displayNIM" class="fw-bold mt-2"></div>
-    </div>
-    </div>
+      class="py-5 bg-light d-flex flex-column justify-content-center align-items-center">
+      <!--Student NIM Data Input Form-->
+      <div class="card shadow-lg p-5 col-10 col-md-4 d-flex flex-column align-items-start">
+        <h4 class="mb-4 text-center w-100"> Masukkan Data Mahasiswa </h4>
+        <div class="form-group w-100">
+          <label for="InputNIM" class="form-label">NIM:</label>
+          <input type="text" id="InputNIM" class="form-control mb-2">
+        </div>
+        <div class="d-grid gap-2 w-100">
+          <button type="button" onclick="submitNIM()" class="btn btn-success">Simpan Data</button>
+        </div>
+      </div>
+      <!--Student NIM Data Output-->
+      <div class="card mt-4 p-4 col-10 col-md-4 d-flex flex-column align-items-start">
+        <h4 class="text-center w-100">Data Mahasiswa</h4>
+        <div class="w-100 mt-3">
+          <span class="fw-bold">NIM:</span>
+          <div id="displayNIM" class="fw-bold mt-2"></div>
+        </div>
+      </div>
     </div>
     <script>
       function submitNIM() {
