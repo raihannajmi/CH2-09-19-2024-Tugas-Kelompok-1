@@ -1,0 +1,12 @@
+.bg-custom{
+  background: #F1F3FF;
+}
+.button {
+  background-color: rgb(25, 177, 25);
+  padding: 1vw 2vw;
+  border-radius: 10px;
+  color: white;
+  width: fit-content;
+  margin: 20px auto 0;
+  cursor: pointer;
+}
