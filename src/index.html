@@ -1,126 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
-    <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="./style/style.css" />
-  </head>
 
-  <body>
-    <!-- Section untuk mengubah teks -->
-    <section>
-      <h2>Ubah Teks</h2>
-      <h1 id="demo">This is some text.</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+  <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="./style/style.css" />
+</head>
 
-      <input type="text" id="inputText" placeholder="Masukkan teks baru" />
+<body>
+  <!-- Section add navbar by rizal -->
+  <section id="navbar">
 
-      <button onclick="changeText()">Change Text</button>
+    <div class="container">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+          <span class="fs-2 text-success fw-bold">GeeksForGeeks</span>
+        </a>
 
-      <script>
-        function changeText() {
-          // Ambil elemen input dan teks demo
-          let inputElement = document.getElementById("inputText");
-          let demoElement = document.getElementById("demo");
+        <!-- fill in the appropriate section -->
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="#navbar" class="nav-link active" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        </ul>
+      </header>
+    </div>
+  </section>
 
-          // Ubah teks elemen 'demo' berdasarkan input
-          demoElement.textContent = inputElement.value;
-        }
-      </script>
-    </section>
+  <!-- Section untuk mengubah teks -->
+  <section>
+    <h2>Ubah Teks</h2>
+    <h1 id="demo">This is some text.</h1>
 
-    <!--Student NIM Data Input Section By Ferdi-->
-    <div id="sect-2" 
-      class="py-5 bg-light d-flex flex-column justify-content-center align-items-center">
-      <!--Student NIM Data Input Form-->
-      <div class="card shadow-lg p-5 col-10 col-md-4 d-flex flex-column align-items-start">
-        <h4 class="mb-4 text-center w-100"> Masukkan Data Mahasiswa </h4>
-        <div class="form-group w-100">
-          <label for="InputNIM" class="form-label">NIM:</label>
-          <input type="text" id="InputNIM" class="form-control mb-2">
-        </div>
-        <div class="d-grid gap-2 w-100">
-          <button type="button" onclick="submitNIM()" class="btn btn-success">Simpan Data</button>
-        </div>
+    <input type="text" id="inputText" placeholder="Masukkan teks baru" />
+
+    <button onclick="changeText()">Change Text</button>
+
+    <script>
+      function changeText() {
+        // Ambil elemen input dan teks demo
+        let inputElement = document.getElementById("inputText");
+        let demoElement = document.getElementById("demo");
+
+        // Ubah teks elemen 'demo' berdasarkan input
+        demoElement.textContent = inputElement.value;
+      }
+    </script>
+  </section>
+
+  <!--Student NIM Data Input Section By Ferdi-->
+  <div id="sect-2" class="py-5 bg-light d-flex flex-column justify-content-center align-items-center">
+    <!--Student NIM Data Input Form-->
+    <div class="card shadow-lg p-5 col-10 col-md-4 d-flex flex-column align-items-start">
+      <h4 class="mb-4 text-center w-100"> Masukkan Data Mahasiswa </h4>
+      <div class="form-group w-100">
+        <label for="InputNIM" class="form-label">NIM:</label>
+        <input type="text" id="InputNIM" class="form-control mb-2">
       </div>
-      <!--Student NIM Data Output-->
-      <div class="card mt-4 p-4 col-10 col-md-4 d-flex flex-column align-items-start">
-        <h4 class="text-center w-100">Data Mahasiswa</h4>
-        <div class="w-100 mt-3">
-          <span class="fw-bold">NIM:</span>
-          <div id="displayNIM" class="fw-bold mt-2"></div>
+      <div class="d-grid gap-2 w-100">
+        <button type="button" onclick="submitNIM()" class="btn btn-success">Simpan Data</button>
+      </div>
+    </div>
+    <!--Student NIM Data Output-->
+    <div class="card mt-4 p-4 col-10 col-md-4 d-flex flex-column align-items-start">
+      <h4 class="text-center w-100">Data Mahasiswa</h4>
+      <div class="w-100 mt-3">
+        <span class="fw-bold">NIM:</span>
+        <div id="displayNIM" class="fw-bold mt-2"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function submitNIM() {
+      //Display Input Result from Form
+      document.getElementById("displayNIM").innerHTML = document.getElementById("InputNIM").value;
+    }
+  </script>
+
+  <!-- section input data mahasiswa made by aqsa -->
+  <section>
+    <div id="sect-1"
+      class="py-5 bg-custom d-flex flex-column gap-4 gap-md-0 flex-md-row justify-content-around align-items-center align-items-md-stretch">
+      <form action="" id="aqsa" class="card p-4 col-11 col-md-5 d-flex flex-column gap-2">
+        <h3>Form Data Mahasiswa</h3>
+        Nama : <input type="text" id="IName" /> Jenis Kelamin : <input type="text" id="IGender" />
+        <div onclick="changeText()" class="button">Input Data</div>
+      </form>
+
+      <div class="card col-11 col-md-5 p-4">
+        <h3>Data Mahasiswa</h3>
+        Nama :
+        <div id="name" class="fw-bold"></div>
+        Jenis Kelamin :
+        <div id="gender" class="fw-bold"></div>
+      </div>
+    </div>
+
+    <script>
+      function changeText() {
+        document.getElementById("name").innerHTML = document.getElementById("IName").value;
+        document.getElementById("gender").innerHTML = document.getElementById("IGender").value;
+      }
+    </script>
+  </section>
+
+  <!-- Section Adding Card by Iqmal -->
+  <section>
+    <div class="container">
+      <div class="row gap-5">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
         </div>
       </div>
     </div>
-    <script>
-      function submitNIM() {
-      //Display Input Result from Form
-      document.getElementById("displayNIM").innerHTML = document.getElementById("InputNIM").value;
-      }
-    </script>
-
-    <!-- section input data mahasiswa made by aqsa -->
-    <section>
-      <div id="sect-1" class="py-5 bg-custom d-flex flex-column gap-4 gap-md-0 flex-md-row justify-content-around align-items-center align-items-md-stretch">
-        <form action="" id="aqsa" class="card p-4 col-11 col-md-5 d-flex flex-column gap-2">
-          <h3>Form Data Mahasiswa</h3>
-          Nama : <input type="text" id="IName" /> Jenis Kelamin : <input type="text" id="IGender" />
-          <div onclick="changeText()" class="button">Input Data</div>
-        </form>
-
-        <div class="card col-11 col-md-5 p-4">
-          <h3>Data Mahasiswa</h3>
-          Nama :
-          <div id="name" class="fw-bold"></div>
-          Jenis Kelamin :
-          <div id="gender" class="fw-bold"></div>
+    <div class="container-fluid mt-5">
+      <form>
+        <div class="mb-3">
+          <label for="inputFullName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="inputFullName" />
         </div>
-      </div>
-
-      <script>
-        function changeText() {
-          document.getElementById("name").innerHTML = document.getElementById("IName").value;
-          document.getElementById("gender").innerHTML = document.getElementById("IGender").value;
-        }
-      </script>
-    </section>
-
-    <!-- Section Adding Card by Iqmal -->
-    <section>
-      <div class="container">
-        <div class="row gap-5">
-          <div class="card" style="width: 18rem">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
+        <div class="mb-3">
+          <label for="inputDesc" class="form-label">Description</label>
+          <input type="text" class="form-control" id="inputDesc" />
         </div>
-      </div>
-      <div class="container-fluid mt-5">
-        <form>
-          <div class="mb-3">
-            <label for="inputFullName" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="inputFullName" />
-          </div>
-          <div class="mb-3">
-            <label for="inputDesc" class="form-label">Description</label>
-            <input type="text" class="form-control" id="inputDesc" />
-          </div>
-          <button type="submit" class="btn btn-success">Submit</button>
-        </form>
-      </div>
-    </section>
-  </body>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+  </section>
+</body>
+
 </html>
