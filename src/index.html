@@ -19,15 +19,15 @@
             <div class="input-test">
               <div class="input-group mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-default">Nama</span>
-                <input type="text" id="input-name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <input type="text" id="input-name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
               </div>
               <div class="input-group mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-default">Prodi</span>
-                <input type="text" id="input-prodi" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <input type="text" id="input-prodi" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
               </div>
               <div class="input-group mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-default">Universitas</span>
-                <input type="text" id="input-univ" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <input type="text" id="input-univ" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
               </div>
             </div>
             <button onclick="submitText()" class="btn-submit btn btn-success">Submit</button>
@@ -99,7 +99,7 @@
         <div class="card col-11 col-md-5 p-4">
           <h3>Data Mahasiswa</h3>
           Nama :
-          <div id="name" class="fw-bold"></div>
+          <div id="nama" class="fw-bold"></div>
           Jenis Kelamin :
           <div id="gender" class="fw-bold"></div>
         </div>
@@ -107,7 +107,7 @@
 
       <script>
         function changeText() {
-          document.getElementById("name").innerHTML = document.getElementById("IName").value;
+          document.getElementById("nama").innerHTML = document.getElementById("IName").value;
           document.getElementById("gender").innerHTML = document.getElementById("IGender").value;
         }
       </script>
