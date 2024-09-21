@@ -19,15 +19,15 @@
             <div class="input-test">
               <div class="input-group mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-default">Nama</span>
-                <input type="text" id="input-name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <input type="text" id="input-name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
               </div>
               <div class="input-group mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-default">Prodi</span>
-                <input type="text" id="input-prodi" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <input type="text" id="input-prodi" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
               </div>
               <div class="input-group mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-default">Universitas</span>
-                <input type="text" id="input-univ" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                <input type="text" id="input-univ" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
               </div>
             </div>
             <button onclick="submitText()" class="btn-submit btn btn-success">Submit</button>
@@ -59,14 +59,13 @@
     </section>
 
     <!--Student NIM Data Input Section By Ferdi-->
-    <div id="sect-2" 
-      class="py-5 bg-light d-flex flex-column justify-content-center align-items-center">
+    <div id="sect-2" class="py-5 bg-light d-flex flex-column justify-content-center align-items-center">
       <!--Student NIM Data Input Form-->
       <div class="card shadow-lg p-5 col-10 col-md-4 d-flex flex-column align-items-start">
-        <h4 class="mb-4 text-center w-100"> Masukkan Data Mahasiswa </h4>
+        <h4 class="mb-4 text-center w-100">Masukkan Data Mahasiswa</h4>
         <div class="form-group w-100">
           <label for="InputNIM" class="form-label">NIM:</label>
-          <input type="text" id="InputNIM" class="form-control mb-2">
+          <input type="text" id="InputNIM" class="form-control mb-2" />
         </div>
         <div class="d-grid gap-2 w-100">
           <button type="button" onclick="submitNIM()" class="btn btn-success">Simpan Data</button>
@@ -83,8 +82,8 @@
     </div>
     <script>
       function submitNIM() {
-      //Display Input Result from Form
-      document.getElementById("displayNIM").innerHTML = document.getElementById("InputNIM").value;
+        //Display Input Result from Form
+        document.getElementById("displayNIM").innerHTML = document.getElementById("InputNIM").value;
       }
     </script>
 
@@ -100,7 +99,7 @@
         <div class="card col-11 col-md-5 p-4">
           <h3>Data Mahasiswa</h3>
           Nama :
-          <div id="name" class="fw-bold"></div>
+          <div id="nama" class="fw-bold"></div>
           Jenis Kelamin :
           <div id="gender" class="fw-bold"></div>
         </div>
@@ -108,45 +107,85 @@
 
       <script>
         function changeText() {
-          document.getElementById("name").innerHTML = document.getElementById("IName").value;
+          document.getElementById("nama").innerHTML = document.getElementById("IName").value;
           document.getElementById("gender").innerHTML = document.getElementById("IGender").value;
         }
       </script>
     </section>
 
     <!-- Section Adding Card by Iqmal -->
-    <section>
+    <section class="bg-light" style="padding: 0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#a2d9ff"
+          fill-opacity="1"
+          d="M0,288L34.3,266.7C68.6,245,137,203,206,181.3C274.3,160,343,160,411,176C480,192,549,224,617,202.7C685.7,181,754,107,823,106.7C891.4,107,960,181,1029,192C1097.1,203,1166,149,1234,144C1302.9,139,1371,181,1406,202.7L1440,224L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"
+        ></path>
+      </svg>
       <div class="container">
-        <div class="row gap-5">
-          <div class="card" style="width: 18rem">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+        <!-- parent list of card -->
+        <div class="row row-cols-4 justify-content-center" id="cardList">
+          <!-- card -->
+          <div class="col">
+            <div class="card shadow-sm border border-primary-subtle">
+              <div class="card-body">
+                <h5 class="card-title">Muhammad Fatihul Iqmal</h5>
+                <p class="card-text">Silahkan ubah nama lengkap dan deskripsi pada form dibawah. Tekanlah tombol "Save" jika ingin menambahkan card baru</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="container-fluid mt-5">
-        <form>
-          <div class="mb-3">
-            <label for="inputFullName" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="inputFullName" />
-          </div>
-          <div class="mb-3">
-            <label for="inputDesc" class="form-label">Description</label>
-            <input type="text" class="form-control" id="inputDesc" />
-          </div>
-          <button type="submit" class="btn btn-success">Submit</button>
-        </form>
+      <!-- form -->
+      <div class="container mt-5">
+        <div class="border border-success p-4 rounded-5">
+          <form class="d-grid">
+            <div class="mb-3">
+              <label for="inputFullName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="inputFullName" value="Aditama Rachman" />
+            </div>
+            <div class="mb-3">
+              <label for="inputDesc" class="form-label">Description</label>
+              <input type="text" class="form-control" id="inputDesc" value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, deserunt debitis ullam sequi ducimus iusto iste? Cupiditate tempore aperiam at." />
+            </div>
+            <button type="button" class="btn btn-success w-50" onclick="addNew()" style="justify-self: center">Save Data</button>
+          </form>
+        </div>
       </div>
+      <script>
+        function addNew() {
+          // get input value
+          const fullNameValue = document.getElementById("inputFullName").value;
+          const descValue = document.getElementById("inputDesc").value;
+
+          // making new card
+          const ChildP = document.createElement("p");
+          ChildP.classList.add("card-text");
+          ChildP.innerHTML = descValue;
+          const ChildH2 = document.createElement("h5");
+          ChildH2.classList.add("card-title");
+          ChildH2.innerHTML = fullNameValue;
+          const cardBody = document.createElement("div");
+          cardBody.append(ChildH2, ChildP);
+          cardBody.className = "card-body";
+          const divCard = document.createElement("div");
+          divCard.className = "card shadow-sm border border-primary-subtle";
+          divCard.appendChild(cardBody);
+          const newCard = document.createElement("div");
+          newCard.classList.add("col");
+          newCard.appendChild(divCard);
+
+          // adding new card to cardList -> showing in web
+          document.getElementById("cardList").appendChild(newCard);
+        }
+      </script>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#a2d9ff"
+          fill-opacity="1"
+          d="M0,288L34.3,266.7C68.6,245,137,203,206,181.3C274.3,160,343,160,411,176C480,192,549,224,617,202.7C685.7,181,754,107,823,106.7C891.4,107,960,181,1029,192C1097.1,203,1166,149,1234,144C1302.9,139,1371,181,1406,202.7L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+        ></path>
+      </svg>
     </section>
   </body>
 </html>

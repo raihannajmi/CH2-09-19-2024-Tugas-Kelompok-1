@@ -11,13 +11,18 @@
   cursor: pointer;
 }
 
-section {
+section,
+#sect-2 {
   padding: 30px 0px;
-  border-bottom: 1px red solid;
+  border-bottom: 1px green solid;
 }
 
-.input-card{
-  width:40%;
+.col {
+  margin: 1.5rem 0px;
+}
+
+.input-card {
+  width: 40%;
 }
 
 .input-group-text {
