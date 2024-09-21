@@ -11,23 +11,49 @@
   </head>
 
   <body>
-    <!-- Section untuk mengubah teks -->
+    <!-- Section Data Universitas Mahasiswa by Almagius -->
     <section>
-      <h2>Ubah Teks</h2>
-      <h1 id="demo">This is some text.</h1>
-
-      <input type="text" id="inputText" placeholder="Masukkan teks baru" />
-
-      <button onclick="changeText()">Change Text</button>
-
+      <div class="container">
+        <div class="input-card mb-4 card">
+          <div class="card-body">
+            <div class="input-test">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Nama</span>
+                <input type="text" id="input-name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Prodi</span>
+                <input type="text" id="input-prodi" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Universitas</span>
+                <input type="text" id="input-univ" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>
+            </div>
+            <button onclick="submitText()" class="btn-submit btn btn-success">Submit</button>
+          </div>
+        </div>
+        <div class="input-card card">
+          <div class="card-body">
+            <p>Nama : <span id="name"></span></p>
+            <p>Prodi : <span id="prodi"></span></p>
+            <p>Universitas : <span id="univ"></span></p>
+          </div>
+        </div>
+      </div>
       <script>
-        function changeText() {
-          // Ambil elemen input dan teks demo
-          let inputElement = document.getElementById("inputText");
-          let demoElement = document.getElementById("demo");
-
-          // Ubah teks elemen 'demo' berdasarkan input
-          demoElement.textContent = inputElement.value;
+        function submitText() {
+          // Ambil elemen nama, prodi, universitas
+          let inputName = document.getElementById("input-name");
+          let inputProdi = document.getElementById("input-prodi");
+          let inputUniv = document.getElementById("input-univ");
+          let name = document.getElementById("name");
+          let prodi = document.getElementById("prodi");
+          let universitas = document.getElementById("univ");
+          // Menampilkan hasil input
+          name.innerHTML = inputName.value;
+          prodi.innerHTML = inputProdi.value;
+          universitas.innerHTML = inputUniv.value;
         }
       </script>
     </section>
