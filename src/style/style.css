@@ -15,3 +15,11 @@ section {
   padding: 30px 0px;
   border-bottom: 1px red solid;
 }
+
+.input-card{
+  width:40%;
+}
+
+.input-group-text {
+  width: 120px;
+}
