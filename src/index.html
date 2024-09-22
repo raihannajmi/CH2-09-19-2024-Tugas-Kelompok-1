@@ -187,5 +187,96 @@
         ></path>
       </svg>
     </section>
+
+    <!-- section search by Hanip -->
+    <section class="py-5 bg-light d-flex flex-column justify-content-center align-items-center">
+        <!-- student list -->
+        <div class="card shadow-lg p-3 col-10 col-md-4 mb-4">
+          <h4 class="mb-2 text-center">Daftar Mahasiswa</h4>
+          <p class="mb-2 text-center" style="font-weight: 700;">"Nama - NIM"</p>
+          <div style="max-height: 200px; overflow-y: auto;">
+            <ul class="list-group">
+              <li class="list-group-item">Hanip - 111111</li>
+              <li class="list-group-item">Wahyu - 222222</li>
+              <li class="list-group-item">Raply - 333333</li>
+              <li class="list-group-item">Raihan - 444444</li>
+              <li class="list-group-item">Muria - 555555</li>
+              <li class="list-group-item">Iqmal - 666666</li>
+              <li class="list-group-item">Nita - 777777</li>
+              <li class="list-group-item">Nanda - 888888</li>
+              <li class="list-group-item">Aqsa - 999999</li>
+              <li class="list-group-item">Melinda - 000000</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- search data by NIM -->
+        <div class="card shadow-lg p-5 col-10 col-md-4 d-flex flex-column align-items-start">
+          <h4 class="mb-4 text-center w-100">Cari Data Mahasiswa</h4>
+          <div class="form-group w-100">
+            <label for="SearchNIM" class="form-label">Masukkan NIM:</label>
+            <input type="text" id="SearchNIM" class="form-control mb-2" />
+          </div>
+          <div class="d-grid gap-2 w-100">
+            <button type="button" onclick="searchdatabyNIM()" class="btn btn-primary">Cari Data</button>
+          </div>
+        </div>
+
+        <!-- output -->
+        <div id="searchResult" class="card mt-4 p-4 col-10 col-md-4 d-flex flex-column align-items-start" style="display:none;">
+          <h4 class="text-center w-100">Hasil Pencarian Data Mahasiswa</h4>
+          <div class="w-100 mt-3">
+            <span class="fw-bold">NIM:</span>
+            <div id="resultNIM" class="fw-bold mt-2"></div>
+          </div>
+          <div class="w-100 mt-3">
+            <span class="fw-bold">Nama:</span>
+            <div id="resultNama" class="fw-bold mt-2"></div>
+          </div>
+          <div class="w-100 mt-3">
+            <span class="fw-bold">Program Studi:</span>
+            <div id="resultProdi" class="fw-bold mt-2"></div>
+          </div>
+          <div class="w-100 mt-3">
+            <span class="fw-bold">Angkatan:</span>
+            <div id="resultAngkatan" class="fw-bold mt-2"></div>
+          </div>
+        </div>
+
+      <script>
+        // student list
+        let studentData = [
+          { nim: "111111", nama: "Hanip", prodi: "S1 Sistem Informasi", angkatan: "2022" },
+          { nim: "222222", nama: "Wahyu", prodi: "S1 Informatika", angkatan: "2024" },
+          { nim: "333333", nama: "Raply", prodi: "S1 Teknik Elektro", angkatan: "2023" },
+          { nim: "444444", nama: "Raihan", prodi: "S1 Sistem Informasi", angkatan: "2022" },
+          { nim: "555555", nama: "Muria", prodi: "S1 Informatika", angkatan: "2021" },
+          { nim: "666666", nama: "Iqmal", prodi: "S1 Teknik Sipil", angkatan: "2024" },
+          { nim: "777777", nama: "Nita", prodi: "S1 Desain Komunikasi Visual", angkatan: "2023" },
+          { nim: "888888", nama: "Nanda", prodi: "S1 Manajemen", angkatan: "2022" },
+          { nim: "999999", nama: "Aqsa", prodi: "S1 Akuntansi", angkatan: "2024" },
+          { nim: "000000", nama: "Melinda", prodi: "S1 Teknik Informatika", angkatan: "2023" }
+        ];
+
+        // search data by NIM
+        function searchdatabyNIM() {
+          let searchNIM = document.getElementById("SearchNIM").value;
+          let result = studentData.find(student => student.nim === searchNIM);
+        
+        // output
+          if (result) {
+            document.getElementById("resultNIM").innerHTML = result.nim;
+            document.getElementById("resultNama").innerHTML = result.nama;
+            document.getElementById("resultProdi").innerHTML = result.prodi;
+            document.getElementById("resultAngkatan").innerHTML = result.angkatan;
+            document.getElementById("searchResult").style.display = "block";
+          } else {
+            alert("Data mahasiswa dengan NIM \"" + searchNIM + "\" tidak ditemukan.");
+            document.getElementById("searchResult").style.display = "none";
+          }
+        }
+      </script>
+    </section>
+
   </body>
 </html>
