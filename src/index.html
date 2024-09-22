@@ -12,6 +12,94 @@
 </head>
 
 <body>
+  <!-- Section for make custom navbar by Nanda -->
+  <section>
+    <div class="container">
+      <div class="text-center mb-4">
+        <h1>Hello guys👋</h1>
+        <p>Are you confused about creating a navbar that matches the color or menu? let's try customizing it</p>
+      </div>
+
+      <nav class="navbar navbar-expand-lg p-3" id="navbar">
+        <a class="navbar-brand" href="#" id="navbarBrand">
+          <span id="navbarBrandText">Navbar</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link menu-item" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menu-item" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menu-item" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="mt-4">
+        <h2 class="text-center">Let's costumize your navbar here</h2>
+
+        <!-- Custom background color -->
+        <div class="my-4">
+          <label for="navbarColor" class="mb-2">Navbar Background Color:</label>
+          <input type="color" id="navbarColor" value="#333">
+          <button class="btn btn-primary mt-2 d-flex" onclick="changeNavbarColor()">Apply</button>
+        </div>
+
+        <!-- Custom menu/add and remove menu -->
+        <div class="form-group mb-4">
+          <label for="menuItem" class="mb-2">Navbar New Menu Item:</label>
+          <input type="text" id="menuItem" class="form-control">
+          <div class="mb-2 d-flex gap-2">
+            <button class="btn btn-success mt-2" onclick="addMenuItem()">Add New Menu</button>
+            <button class="btn btn-danger mt-2" onclick="removeMenuItem()">Remove Last Menu</button>
+          </div>
+        </div>
+
+        <!-- Custom navbar brand -->
+        <div class="form-group mb-4">
+          <label for="navbarBrandName" class="mb-2">Navbar Brand Name:</label>
+          <input type="text" id="navbarBrandName" class="form-control">
+          <button class="btn btn-primary mt-2" onclick="changeNavbarBrand()">Apply</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function changeNavbarColor() {
+      document.getElementById('navbar').style.backgroundColor = document.getElementById('navbarColor').value;
+    }
+
+    function addMenuItem() {
+      const newItem = document.getElementById('menuItem').value;
+      if (newItem) {
+        const li = document.createElement('li');
+        li.className = 'nav-item';
+        li.innerHTML = `<a href="#" class="nav-link menu-item">${newItem}</a>`;
+        document.querySelector('.navbar-nav').appendChild(li);
+        document.getElementById('menuItem').value = '';
+      }
+    }
+
+    function removeMenuItem() {
+      const navbar = document.querySelector('.navbar-nav');
+      if (navbar.lastElementChild) navbar.lastElementChild.remove();
+    }
+
+    function changeNavbarBrand() {
+      const brandName = document.getElementById('navbarBrandName').value;
+      if (brandName) document.getElementById('navbarBrandText').textContent = brandName;
+    }
+  </script>
+
   <!-- Section Data Universitas Mahasiswa by Almagius -->
   <section>
     <div class="container">
