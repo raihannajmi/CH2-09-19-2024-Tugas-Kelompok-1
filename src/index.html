@@ -1,281 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
-    <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="./style/style.css" />
-  </head>
 
-  <body>
-    <!-- Section Data Universitas Mahasiswa by Almagius -->
-    <section>
-      <div class="container">
-        <div class="input-card mb-4 card">
-          <div class="card-body">
-            <div class="input-test">
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Nama</span>
-                <input type="text" id="input-name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
-              </div>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Prodi</span>
-                <input type="text" id="input-prodi" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
-              </div>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="inputGroup-sizing-default">Universitas</span>
-                <input type="text" id="input-univ" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+  <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="./style/style.css" />
+</head>
+
+<body>
+  <!-- Section Data Universitas Mahasiswa by Almagius -->
+  <section>
+    <div class="container">
+      <div class="input-card mb-4 card">
+        <div class="card-body">
+          <div class="input-test">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">Nama</span>
+              <input type="text" id="input-name" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default" />
             </div>
-            <button onclick="submitText()" class="btn-submit btn btn-success">Submit</button>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">Prodi</span>
+              <input type="text" id="input-prodi" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default" />
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">Universitas</span>
+              <input type="text" id="input-univ" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default" />
+            </div>
           </div>
-        </div>
-        <div class="input-card card">
-          <div class="card-body">
-            <p>Nama : <span id="name"></span></p>
-            <p>Prodi : <span id="prodi"></span></p>
-            <p>Universitas : <span id="univ"></span></p>
-          </div>
+          <button onclick="submitText()" class="btn-submit btn btn-success">Submit</button>
         </div>
       </div>
-      <script>
-        function submitText() {
-          // Ambil elemen nama, prodi, universitas
-          let inputName = document.getElementById("input-name");
-          let inputProdi = document.getElementById("input-prodi");
-          let inputUniv = document.getElementById("input-univ");
-          let name = document.getElementById("name");
-          let prodi = document.getElementById("prodi");
-          let universitas = document.getElementById("univ");
-          // Menampilkan hasil input
-          name.innerHTML = inputName.value;
-          prodi.innerHTML = inputProdi.value;
-          universitas.innerHTML = inputUniv.value;
-        }
-      </script>
-    </section>
-
-    <!--Student NIM Data Input Section By Ferdi-->
-    <div id="sect-2" class="py-5 bg-light d-flex flex-column justify-content-center align-items-center">
-      <!--Student NIM Data Input Form-->
-      <div class="card shadow-lg p-5 col-10 col-md-4 d-flex flex-column align-items-start">
-        <h4 class="mb-4 text-center w-100">Masukkan Data Mahasiswa</h4>
-        <div class="form-group w-100">
-          <label for="InputNIM" class="form-label">NIM:</label>
-          <input type="text" id="InputNIM" class="form-control mb-2" />
-        </div>
-        <div class="d-grid gap-2 w-100">
-          <button type="button" onclick="submitNIM()" class="btn btn-success">Simpan Data</button>
-        </div>
-      </div>
-      <!--Student NIM Data Output-->
-      <div class="card mt-4 p-4 col-10 col-md-4 d-flex flex-column align-items-start">
-        <h4 class="text-center w-100">Data Mahasiswa</h4>
-        <div class="w-100 mt-3">
-          <span class="fw-bold">NIM:</span>
-          <div id="displayNIM" class="fw-bold mt-2"></div>
+      <div class="input-card card">
+        <div class="card-body">
+          <p>Nama : <span id="name"></span></p>
+          <p>Prodi : <span id="prodi"></span></p>
+          <p>Universitas : <span id="univ"></span></p>
         </div>
       </div>
     </div>
     <script>
-      function submitNIM() {
-        //Display Input Result from Form
-        document.getElementById("displayNIM").innerHTML = document.getElementById("InputNIM").value;
+      function submitText() {
+        // Ambil elemen nama, prodi, universitas
+        let inputName = document.getElementById("input-name");
+        let inputProdi = document.getElementById("input-prodi");
+        let inputUniv = document.getElementById("input-univ");
+        let name = document.getElementById("name");
+        let prodi = document.getElementById("prodi");
+        let universitas = document.getElementById("univ");
+        // Menampilkan hasil input
+        name.innerHTML = inputName.value;
+        prodi.innerHTML = inputProdi.value;
+        universitas.innerHTML = inputUniv.value;
       }
     </script>
+  </section>
 
-    <!-- section input data mahasiswa made by aqsa -->
-    <section>
-      <div id="sect-1" class="py-5 bg-custom d-flex flex-column gap-4 gap-md-0 flex-md-row justify-content-around align-items-center align-items-md-stretch">
-        <form action="" id="aqsa" class="card p-4 col-11 col-md-5 d-flex flex-column gap-2">
-          <h3>Form Data Mahasiswa</h3>
-          Nama : <input type="text" id="IName" /> Jenis Kelamin : <input type="text" id="IGender" />
-          <div onclick="changeText()" class="button">Input Data</div>
-        </form>
-
-        <div class="card col-11 col-md-5 p-4">
-          <h3>Data Mahasiswa</h3>
-          Nama :
-          <div id="nama" class="fw-bold"></div>
-          Jenis Kelamin :
-          <div id="gender" class="fw-bold"></div>
-        </div>
+  <!--Student NIM Data Input Section By Ferdi-->
+  <div id="sect-2" class="py-5 bg-light d-flex flex-column justify-content-center align-items-center">
+    <!--Student NIM Data Input Form-->
+    <div class="card shadow-lg p-5 col-10 col-md-4 d-flex flex-column align-items-start">
+      <h4 class="mb-4 text-center w-100">Masukkan Data Mahasiswa</h4>
+      <div class="form-group w-100">
+        <label for="InputNIM" class="form-label">NIM:</label>
+        <input type="text" id="InputNIM" class="form-control mb-2" />
       </div>
+      <div class="d-grid gap-2 w-100">
+        <button type="button" onclick="submitNIM()" class="btn btn-success">Simpan Data</button>
+      </div>
+    </div>
+    <!--Student NIM Data Output-->
+    <div class="card mt-4 p-4 col-10 col-md-4 d-flex flex-column align-items-start">
+      <h4 class="text-center w-100">Data Mahasiswa</h4>
+      <div class="w-100 mt-3">
+        <span class="fw-bold">NIM:</span>
+        <div id="displayNIM" class="fw-bold mt-2"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function submitNIM() {
+      //Display Input Result from Form
+      document.getElementById("displayNIM").innerHTML = document.getElementById("InputNIM").value;
+    }
+  </script>
 
-      <script>
-        function changeText() {
-          document.getElementById("nama").innerHTML = document.getElementById("IName").value;
-          document.getElementById("gender").innerHTML = document.getElementById("IGender").value;
-        }
-      </script>
-    </section>
+  <!-- section input data mahasiswa made by aqsa -->
+  <section>
+    <div id="sect-1"
+      class="py-5 bg-custom d-flex flex-column gap-4 gap-md-0 flex-md-row justify-content-around align-items-center align-items-md-stretch">
+      <form action="" id="aqsa" class="card p-4 col-11 col-md-5 d-flex flex-column gap-2">
+        <h3>Form Data Mahasiswa</h3>
+        Nama : <input type="text" id="IName" /> Jenis Kelamin : <input type="text" id="IGender" />
+        <div onclick="changeText()" class="button">Input Data</div>
+      </form>
 
-    <!-- Section Adding Card by Iqmal -->
-    <section class="bg-light" style="padding: 0">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#a2d9ff"
-          fill-opacity="1"
-          d="M0,288L34.3,266.7C68.6,245,137,203,206,181.3C274.3,160,343,160,411,176C480,192,549,224,617,202.7C685.7,181,754,107,823,106.7C891.4,107,960,181,1029,192C1097.1,203,1166,149,1234,144C1302.9,139,1371,181,1406,202.7L1440,224L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"
-        ></path>
-      </svg>
-      <div class="container">
-        <!-- parent list of card -->
-        <div class="row row-cols-4 justify-content-center" id="cardList">
-          <!-- card -->
-          <div class="col">
-            <div class="card shadow-sm border border-primary-subtle">
-              <div class="card-body">
-                <h5 class="card-title">Muhammad Fatihul Iqmal</h5>
-                <p class="card-text">Silahkan ubah nama lengkap dan deskripsi pada form dibawah. Tekanlah tombol "Save" jika ingin menambahkan card baru</p>
-              </div>
+      <div class="card col-11 col-md-5 p-4">
+        <h3>Data Mahasiswa</h3>
+        Nama :
+        <div id="nama" class="fw-bold"></div>
+        Jenis Kelamin :
+        <div id="gender" class="fw-bold"></div>
+      </div>
+    </div>
+
+    <script>
+      function changeText() {
+        document.getElementById("nama").innerHTML = document.getElementById("IName").value;
+        document.getElementById("gender").innerHTML = document.getElementById("IGender").value;
+      }
+    </script>
+  </section>
+
+  <!-- Section Adding Card by Iqmal -->
+  <section class="bg-light" style="padding: 0">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#a2d9ff" fill-opacity="1"
+        d="M0,288L34.3,266.7C68.6,245,137,203,206,181.3C274.3,160,343,160,411,176C480,192,549,224,617,202.7C685.7,181,754,107,823,106.7C891.4,107,960,181,1029,192C1097.1,203,1166,149,1234,144C1302.9,139,1371,181,1406,202.7L1440,224L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z">
+      </path>
+    </svg>
+    <div class="container">
+      <!-- parent list of card -->
+      <div class="row row-cols-4 justify-content-center" id="cardList">
+        <!-- card -->
+        <div class="col">
+          <div class="card shadow-sm border border-primary-subtle">
+            <div class="card-body">
+              <h5 class="card-title">Muhammad Fatihul Iqmal</h5>
+              <p class="card-text">Silahkan ubah nama lengkap dan deskripsi pada form dibawah. Tekanlah tombol "Save"
+                jika ingin menambahkan card baru</p>
             </div>
           </div>
         </div>
       </div>
-      <!-- form -->
-      <div class="container mt-5">
-        <div class="border border-success p-4 rounded-5">
-          <form class="d-grid">
+    </div>
+    <!-- form -->
+    <div class="container mt-5">
+      <div class="border border-success p-4 rounded-5">
+        <form class="d-grid">
+          <div class="mb-3">
+            <label for="inputFullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="inputFullName" value="Aditama Rachman" />
+          </div>
+          <div class="mb-3">
+            <label for="inputDesc" class="form-label">Description</label>
+            <input type="text" class="form-control" id="inputDesc"
+              value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, deserunt debitis ullam sequi ducimus iusto iste? Cupiditate tempore aperiam at." />
+          </div>
+          <button type="button" class="btn btn-success w-50" onclick="addNew()" style="justify-self: center">Save
+            Data</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      function addNew() {
+        // get input value
+        const fullNameValue = document.getElementById("inputFullName").value;
+        const descValue = document.getElementById("inputDesc").value;
+
+        // making new card
+        const ChildP = document.createElement("p");
+        ChildP.classList.add("card-text");
+        ChildP.innerHTML = descValue;
+        const ChildH2 = document.createElement("h5");
+        ChildH2.classList.add("card-title");
+        ChildH2.innerHTML = fullNameValue;
+        const cardBody = document.createElement("div");
+        cardBody.append(ChildH2, ChildP);
+        cardBody.className = "card-body";
+        const divCard = document.createElement("div");
+        divCard.className = "card shadow-sm border border-primary-subtle";
+        divCard.appendChild(cardBody);
+        const newCard = document.createElement("div");
+        newCard.classList.add("col");
+        newCard.appendChild(divCard);
+
+        // adding new card to cardList -> showing in web
+        document.getElementById("cardList").appendChild(newCard);
+      }
+    </script>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#a2d9ff" fill-opacity="1"
+        d="M0,288L34.3,266.7C68.6,245,137,203,206,181.3C274.3,160,343,160,411,176C480,192,549,224,617,202.7C685.7,181,754,107,823,106.7C891.4,107,960,181,1029,192C1097.1,203,1166,149,1234,144C1302.9,139,1371,181,1406,202.7L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+      </path>
+    </svg>
+  </section>
+
+  <!-- section search by Hanip -->
+  <section class="search-student py-5 d-flex flex-column justify-content-center align-items-center">
+    <!-- student list -->
+    <div class="card shadow-lg p-3 col-10 col-md-4 mb-4">
+      <h4 class="mb-2 text-center">Daftar Mahasiswa</h4>
+      <p class="mb-2 text-center" style="font-weight: 700;">"Nama - NIM"</p>
+      <div style="max-height: 200px; overflow-y: auto;">
+        <ul class="list-group">
+          <li class="list-group-item">Hanip - 111111</li>
+          <li class="list-group-item">Wahyu - 222222</li>
+          <li class="list-group-item">Raply - 333333</li>
+          <li class="list-group-item">Raihan - 444444</li>
+          <li class="list-group-item">Muria - 555555</li>
+          <li class="list-group-item">Iqmal - 666666</li>
+          <li class="list-group-item">Nita - 777777</li>
+          <li class="list-group-item">Nanda - 888888</li>
+          <li class="list-group-item">Aqsa - 999999</li>
+          <li class="list-group-item">Melinda - 000000</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- search data by NIM -->
+    <div class="card shadow-lg p-5 col-10 col-md-4 d-flex flex-column align-items-start">
+      <h4 class="mb-4 text-center w-100">Cari Data Mahasiswa</h4>
+      <div class="form-group w-100">
+        <label for="SearchNIM" class="form-label">Masukkan NIM:</label>
+        <input type="text" id="SearchNIM" class="form-control mb-2" />
+      </div>
+      <div class="d-grid gap-2 w-100">
+        <button type="button" onclick="searchdatabyNIM()" class="btn-search btn btn-primary">Cari Data</button>
+      </div>
+    </div>
+
+    <!-- output -->
+    <div id="searchResult" class="card mt-4 p-4 col-10 col-md-4 d-flex flex-column align-items-start"
+      style="display:none;">
+      <h4 class="text-center w-100">Hasil Pencarian Data Mahasiswa</h4>
+      <div class="w-100 mt-3">
+        <span class="fw-bold">NIM:</span>
+        <div id="resultNIM" class="fw-bold mt-2"></div>
+      </div>
+      <div class="w-100 mt-3">
+        <span class="fw-bold">Nama:</span>
+        <div id="resultNama" class="fw-bold mt-2"></div>
+      </div>
+      <div class="w-100 mt-3">
+        <span class="fw-bold">Program Studi:</span>
+        <div id="resultProdi" class="fw-bold mt-2"></div>
+      </div>
+      <div class="w-100 mt-3">
+        <span class="fw-bold">Angkatan:</span>
+        <div id="resultAngkatan" class="fw-bold mt-2"></div>
+      </div>
+    </div>
+
+    <script>
+      // student list
+      let studentData = [
+        { nim: "111111", nama: "Hanip", prodi: "S1 Sistem Informasi", angkatan: "2022" },
+        { nim: "222222", nama: "Wahyu", prodi: "S1 Informatika", angkatan: "2024" },
+        { nim: "333333", nama: "Raply", prodi: "S1 Teknik Elektro", angkatan: "2023" },
+        { nim: "444444", nama: "Raihan", prodi: "S1 Sistem Informasi", angkatan: "2022" },
+        { nim: "555555", nama: "Muria", prodi: "S1 Informatika", angkatan: "2021" },
+        { nim: "666666", nama: "Iqmal", prodi: "S1 Teknik Sipil", angkatan: "2024" },
+        { nim: "777777", nama: "Nita", prodi: "S1 Desain Komunikasi Visual", angkatan: "2023" },
+        { nim: "888888", nama: "Nanda", prodi: "S1 Manajemen", angkatan: "2022" },
+        { nim: "999999", nama: "Aqsa", prodi: "S1 Akuntansi", angkatan: "2024" },
+        { nim: "000000", nama: "Melinda", prodi: "S1 Teknik Informatika", angkatan: "2023" }
+      ];
+
+      // search data by NIM
+      function searchdatabyNIM() {
+        let searchNIM = document.getElementById("SearchNIM").value;
+        let result = studentData.find(student => student.nim === searchNIM);
+
+        // output
+        if (result) {
+          document.getElementById("resultNIM").innerHTML = result.nim;
+          document.getElementById("resultNama").innerHTML = result.nama;
+          document.getElementById("resultProdi").innerHTML = result.prodi;
+          document.getElementById("resultAngkatan").innerHTML = result.angkatan;
+          document.getElementById("searchResult").style.display = "block";
+        } else {
+          alert("Data mahasiswa dengan NIM \"" + searchNIM + "\" tidak ditemukan.");
+          document.getElementById("searchResult").style.display = "none";
+        }
+      }
+    </script>
+  </section>
+
+
+  <!-- Section adding Card and delete by Rizal-->
+  <section class="py-5">
+    <div class="container">
+      <h3 class="text-center mb-4">Tambahkan Data Baru</h3>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <!-- Form Input -->
+          <form id="simpleCardForm" class="mb-4">
             <div class="mb-3">
-              <label for="inputFullName" class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="inputFullName" value="Aditama Rachman" />
+              <label for="simpleFullName" class="form-label">Nama Lengkap</label>
+              <input type="text" class="form-control" id="simpleFullName" placeholder="Masukkan nama lengkap" />
             </div>
             <div class="mb-3">
-              <label for="inputDesc" class="form-label">Description</label>
-              <input type="text" class="form-control" id="inputDesc" value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, deserunt debitis ullam sequi ducimus iusto iste? Cupiditate tempore aperiam at." />
+              <label for="simpleGender" class="form-label">Jenis Kelamin</label>
+              <select class="form-select" id="simpleGender">
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+              </select>
             </div>
-            <button type="button" class="btn btn-success w-50" onclick="addNew()" style="justify-self: center">Save Data</button>
+            <div class="mb-3">
+              <label for="simpleProdi" class="form-label">Prodi</label>
+              <input type="text" class="form-control" id="simpleProdi" placeholder="Masukkan prodi" />
+            </div>
+            <div class="mb-3">
+              <label for="simpleDesc" class="form-label">Deskripsi</label>
+              <input type="text" class="form-control" id="simpleDesc" placeholder="Masukkan deskripsi" />
+            </div>
+            <button type="button" class="btn btn-primary w-100" onclick="addSimpleCard()">Tambahkan Card</button>
           </form>
         </div>
       </div>
-      <script>
-        function addNew() {
-          // get input value
-          const fullNameValue = document.getElementById("inputFullName").value;
-          const descValue = document.getElementById("inputDesc").value;
+      <div class="row justify-content-center" id="simpleCardList">
+        <!-- Cards will be added here -->
+      </div>
+    </div>
+  </section>
 
-          // making new card
-          const ChildP = document.createElement("p");
-          ChildP.classList.add("card-text");
-          ChildP.innerHTML = descValue;
-          const ChildH2 = document.createElement("h5");
-          ChildH2.classList.add("card-title");
-          ChildH2.innerHTML = fullNameValue;
-          const cardBody = document.createElement("div");
-          cardBody.append(ChildH2, ChildP);
-          cardBody.className = "card-body";
-          const divCard = document.createElement("div");
-          divCard.className = "card shadow-sm border border-primary-subtle";
-          divCard.appendChild(cardBody);
-          const newCard = document.createElement("div");
-          newCard.classList.add("col");
-          newCard.appendChild(divCard);
+  <script>
+    function addSimpleCard() {
+      // Get value from input
+      const fullName = document.getElementById("simpleFullName").value;
+      const gender = document.getElementById("simpleGender").value;
+      const prodi = document.getElementById("simpleProdi").value;
+      const desc = document.getElementById("simpleDesc").value;
 
-          // adding new card to cardList -> showing in web
-          document.getElementById("cardList").appendChild(newCard);
-        }
-      </script>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#a2d9ff"
-          fill-opacity="1"
-          d="M0,288L34.3,266.7C68.6,245,137,203,206,181.3C274.3,160,343,160,411,176C480,192,549,224,617,202.7C685.7,181,754,107,823,106.7C891.4,107,960,181,1029,192C1097.1,203,1166,149,1234,144C1302.9,139,1371,181,1406,202.7L1440,224L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
+      if (fullName === "" || prodi === "") {
+        alert("Nama lengkap dan prodi tidak boleh kosong!");
+        return;
+      }
 
-    <!-- section search by Hanip -->
-    <section class="search-student py-5 d-flex flex-column justify-content-center align-items-center">
-        <!-- student list -->
-        <div class="card shadow-lg p-3 col-10 col-md-4 mb-4">
-          <h4 class="mb-2 text-center">Daftar Mahasiswa</h4>
-          <p class="mb-2 text-center" style="font-weight: 700;">"Nama - NIM"</p>
-          <div style="max-height: 200px; overflow-y: auto;">
-            <ul class="list-group">
-              <li class="list-group-item">Hanip - 111111</li>
-              <li class="list-group-item">Wahyu - 222222</li>
-              <li class="list-group-item">Raply - 333333</li>
-              <li class="list-group-item">Raihan - 444444</li>
-              <li class="list-group-item">Muria - 555555</li>
-              <li class="list-group-item">Iqmal - 666666</li>
-              <li class="list-group-item">Nita - 777777</li>
-              <li class="list-group-item">Nanda - 888888</li>
-              <li class="list-group-item">Aqsa - 999999</li>
-              <li class="list-group-item">Melinda - 000000</li>
-            </ul>
-          </div>
+      // Create a new card element
+      const card = document.createElement("div");
+      card.className = "col-md-4 mb-3";
+      card.innerHTML = `
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">${fullName}</h5>
+          <p class="card-text"><strong>Jenis Kelamin:</strong> ${gender}</p>
+          <p class="card-text"><strong>Prodi:</strong> ${prodi}</p>
+          <p class="card-text"><strong>Deskripsi:</strong> ${desc}</p>
+          <button class="btn btn-danger w-100" onclick="removeCard(this)">Hapus</button>
         </div>
+      </div>
+    `;
 
-        <!-- search data by NIM -->
-        <div class="card shadow-lg p-5 col-10 col-md-4 d-flex flex-column align-items-start">
-          <h4 class="mb-4 text-center w-100">Cari Data Mahasiswa</h4>
-          <div class="form-group w-100">
-            <label for="SearchNIM" class="form-label">Masukkan NIM:</label>
-            <input type="text" id="SearchNIM" class="form-control mb-2" />
-          </div>
-          <div class="d-grid gap-2 w-100">
-            <button type="button" onclick="searchdatabyNIM()" class="btn-search btn btn-primary">Cari Data</button>
-          </div>
-        </div>
+      // Add new card to the list
+      document.getElementById("simpleCardList").appendChild(card);
 
-        <!-- output -->
-        <div id="searchResult" class="card mt-4 p-4 col-10 col-md-4 d-flex flex-column align-items-start" style="display:none;">
-          <h4 class="text-center w-100">Hasil Pencarian Data Mahasiswa</h4>
-          <div class="w-100 mt-3">
-            <span class="fw-bold">NIM:</span>
-            <div id="resultNIM" class="fw-bold mt-2"></div>
-          </div>
-          <div class="w-100 mt-3">
-            <span class="fw-bold">Nama:</span>
-            <div id="resultNama" class="fw-bold mt-2"></div>
-          </div>
-          <div class="w-100 mt-3">
-            <span class="fw-bold">Program Studi:</span>
-            <div id="resultProdi" class="fw-bold mt-2"></div>
-          </div>
-          <div class="w-100 mt-3">
-            <span class="fw-bold">Angkatan:</span>
-            <div id="resultAngkatan" class="fw-bold mt-2"></div>
-          </div>
-        </div>
+      // Clear input after card is added
+      document.getElementById("simpleFullName").value = "";
+      document.getElementById("simpleGender").value = "Laki-laki"; // Reset to default
+      document.getElementById("simpleProdi").value = "";
+      document.getElementById("simpleDesc").value = "";
+    }
 
-      <script>
-        // student list
-        let studentData = [
-          { nim: "111111", nama: "Hanip", prodi: "S1 Sistem Informasi", angkatan: "2022" },
-          { nim: "222222", nama: "Wahyu", prodi: "S1 Informatika", angkatan: "2024" },
-          { nim: "333333", nama: "Raply", prodi: "S1 Teknik Elektro", angkatan: "2023" },
-          { nim: "444444", nama: "Raihan", prodi: "S1 Sistem Informasi", angkatan: "2022" },
-          { nim: "555555", nama: "Muria", prodi: "S1 Informatika", angkatan: "2021" },
-          { nim: "666666", nama: "Iqmal", prodi: "S1 Teknik Sipil", angkatan: "2024" },
-          { nim: "777777", nama: "Nita", prodi: "S1 Desain Komunikasi Visual", angkatan: "2023" },
-          { nim: "888888", nama: "Nanda", prodi: "S1 Manajemen", angkatan: "2022" },
-          { nim: "999999", nama: "Aqsa", prodi: "S1 Akuntansi", angkatan: "2024" },
-          { nim: "000000", nama: "Melinda", prodi: "S1 Teknik Informatika", angkatan: "2023" }
-        ];
+    // Function to delete card
+    function removeCard(button) {
+      const card = button.closest(".col-md-4");
+      card.remove();
+    }
+  </script>
 
-        // search data by NIM
-        function searchdatabyNIM() {
-          let searchNIM = document.getElementById("SearchNIM").value;
-          let result = studentData.find(student => student.nim === searchNIM);
-        
-        // output
-          if (result) {
-            document.getElementById("resultNIM").innerHTML = result.nim;
-            document.getElementById("resultNama").innerHTML = result.nama;
-            document.getElementById("resultProdi").innerHTML = result.prodi;
-            document.getElementById("resultAngkatan").innerHTML = result.angkatan;
-            document.getElementById("searchResult").style.display = "block";
-          } else {
-            alert("Data mahasiswa dengan NIM \"" + searchNIM + "\" tidak ditemukan.");
-            document.getElementById("searchResult").style.display = "none";
-          }
-        }
-      </script>
-    </section>
-  </body>
+</body>
+
 </html>
