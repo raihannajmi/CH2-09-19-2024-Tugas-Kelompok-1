@@ -28,3 +28,17 @@ section,
 .input-group-text {
   width: 120px;
 }
+
+/* search by Hanip */
+.search-student{
+  background-color: #ffea76;
+}
+
+.btn-search{
+  background-color: rgb(25, 177, 25);
+  border: none;
+}
+
+.btn-search:hover{
+  background-color: rgb(0, 146, 0);
+}
